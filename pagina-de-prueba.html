@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Dialog</title>
+</head>
+<body>
+
+<h3>¿Le puedo hacer una pregunta?</h3>
+<button id="btn-abrir-modal">sipi</button>
+<button>nopi, gracias</button>
+
+<dialog id="modal">
+  <p>¿Quieres que jedrell te explique el tema🤭?</p>
+  <button id="btn-cerrar-modal-si">Si seria tan amable😍</button>
+  <button id="btn-cerrar-modal-no">No le tengo envidia a jedrell🤬</button>
+</dialog>
+
+<script>
+  const btnAbrirModal = document.querySelector("#btn-abrir-modal");
+  const modal = document.querySelector("#modal");
+
+  const btnCerrarModalSi = document.querySelector("#btn-cerrar-modal-si");
+  const btnCerrarModalNo = document.querySelector("#btn-cerrar-modal-no");
+
+  btnAbrirModal.addEventListener("click", () => {
+    modal.showModal();
+  });
+
+  btnCerrarModalSi.addEventListener("click", () => {
+    modal.close();
+  });
+
+  btnCerrarModalNo.addEventListener("click", () => {
+    modal.close();
+  });
+</script>
+
+</body>
+</html>
