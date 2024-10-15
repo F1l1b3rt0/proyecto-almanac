@@ -1,0 +1,64 @@
+.header{
+    background-color: #000000;
+    position:fixed;
+    top:0;
+    left:0;
+    width: 95%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.header img{
+    width: 100px;
+    height: 100px;
+}
+.logo{
+    color: goldenrod;
+    font-family: "Silkscreen";
+    font-size: 32px;
+    text-decoration: none;
+    font-weight: 700;
+}
+.navbar a{
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+    color: aliceblue;
+    font-family: sans-serif;
+}
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background:#000000 ;
+    transition: .3s;
+}
+.navbar a:hover::before{
+    width: 100%;
+}
+section{
+    margin-top: 300px;
+    display:flex;
+    width: 500px;
+    height: 350px;
+}
+section img{
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s;
+}
+section img:hover{
+    cursor: crosshair;
+    width: 150px;
+    opacity: 1;
+    filter: contrast(120%);
+}
